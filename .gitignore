@@ -17,5 +17,6 @@
 !rofi/
 !blender/
 !godot/
+!zsh
 !zsh/pure/
-!zsh/.zshrc
+zsh/.zsh_history
