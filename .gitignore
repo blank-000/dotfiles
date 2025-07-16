@@ -16,6 +16,6 @@
 !foot/
 !rofi/
 !blender/
-!zsh/*
-zsh/.zsh_history
 !godot/
+!zsh/pure/
+!zsh/.zshrc
