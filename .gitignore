@@ -1,0 +1,20 @@
+# ignore everything
+*
+
+# do not ignore these:
+!.gitignore
+!hypr/
+!imv/
+!mpv/
+!calcure/
+!ghostty/
+!foot/
+!inkscape/
+!mako/
+!nvim/
+!fastfetch/
+!foot/
+!rofi/
+!blender/
+!zsh/
+!godot/
