@@ -1,0 +1,14 @@
+configuration {
+    display-drun: "apps";
+    display-run: "run";
+    display-calc: "calc";
+    display-emoji: "emoji";
+    display-filebrowser: "files:";
+    drun-display-format: "{icon} {name}";
+    font: "JetBrainsMono Nerd Font Medium 11";
+    modi: "drun,calc,filebrowser"; //this is all the modes that are available and enabled. 
+    show-icons: true;
+    icon-theme: "Everforest-Dark";
+}
+
+@theme "/home/bear/.config/rofi/themes/everforest.rasi"

@@ -1,0 +1,83 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "builtin",
+        "padding": {
+            "left": 2,
+            "right": 8
+        },
+        "color": {
+            "1": "38;2;133;153;102",
+            "2": "38;2;133;153;102"
+        }
+    },
+    "display": {
+        "separator": " ",
+        "key": {
+            "width": 15
+        },
+        "color": {
+            "keys": "38;2;215;200;155",
+            "title": "38;2;167;192;128",
+            "values": "38;2;167;192;128"
+        },
+        "bar": {
+            "width": 10,       // Width of percentage bars
+            "charElapsed": "■", // Character for elapsed portion
+            "charTotal": "-"   // Character for total portion
+        },
+        "percent": {
+            "type": 9,         // 1=number, 2=bar, 3=both, 9=colored number
+            "color": {
+                "green": "38;2;133;153;102",
+                "yellow": "light_yellow",
+                "red": "light_red"
+            }
+        }
+    },
+    "modules": 
+    [
+        "title",
+        "break",
+        {
+            "type": "command",
+            "key": "OS Age ",
+            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+        },
+        "uptime",
+        "break",
+
+        "break",
+        "os",
+        "kernel",
+        "packages",
+        "shell",
+        "de",
+        "wm",
+        "terminal",
+
+        "break",
+        "cpu",
+        "gpu",
+        {
+            "type": "memory",
+            "key": "Memory",
+            "percent": {
+                "type": 2,     // Show both percentage number and bar
+                "green": 30,   // Values below 30% in green
+                "yellow": 70   // 30-70% in yellow, >70% in red
+            }
+        },
+        {
+            "type": "disk",
+            "key": "Disk",
+            "percent": {
+                "type": 2,     // Show both percentage number and bar
+                "green": 50,   // Values below 50% in green
+                "yellow": 70   // 30-70% in yellow, >70% in red
+            }
+        }
+//        ,"colors"
+    ]
+
+}

@@ -1,0 +1,9 @@
+[binds]
+<Ctrl+r>  = reset
+r         = rotate by 90
+<Shift+R> = rotate by -90
+<Ctrl+l>  = next
+<Ctrl+h>  = prev
+<Ctrl+j>  = zoom -10
+<Ctrl+k>  = zoom +10
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<keys
+   name="User Shortcuts">
+  <bind
+     gaction="win.tool-switch('Booleans')"
+     keys="a" />
+  <bind
+     gaction="app.delete"
+     keys="x" />
+  <bind
+     gaction="app.paste-size"
+     keys="&lt;Primary&gt;&lt;Shift&gt;v" />
+  <bind
+     gaction="app.path-difference"
+     keys="KP_Subtract" />
+  <bind
+     gaction="app.path-union"
+     keys="KP_Add" />
+  <bind
+     gaction="app.path-intersection"
+     keys="&lt;Primary&gt;KP_Delete" />
+</keys>
