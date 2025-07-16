@@ -16,6 +16,6 @@
 !foot/
 !rofi/
 !blender/
-!zsh/
-/zsh/.zsh_history
+!zsh/*
+zsh/.zsh_history
 !godot/
