@@ -7,11 +7,11 @@ if [[ "$1" != "+1" && "$1" != "-1" ]]; then
 fi
 
 # Get current workspace number
-current_ws=$(hyprctl monitors | awk '/active workspace/ {print $3}' | head -n1)
+CURRENT_WORKSPACE=$(hyprctl monitors | awk '/active workspace/ {print $3}' | head -n1)
 
 # Calculate new workspace
-new_ws=$(( current_ws + $1 ))
+NEW_WORKSPACE=$(( CURRENT_WORKSPACE + $1 ))
 
 # Call global workspace script with new workspace number
-/home/bear/.config/hypr/scripts/global_workspace.sh "$new_ws"
+/home/bear/.config/hypr/scripts/global_workspace.sh "$NEW_WORKSPACE"
 
