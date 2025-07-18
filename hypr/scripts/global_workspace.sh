@@ -1,22 +1,41 @@
 #!/bin/bash
 
 # if no TARGET is provided, bail out!
-if [ $# -eq 0 ]; then
+if [[ $# -eq 0 ]]; then 
     exit
 fi
 
 TARGET=$1
-MAX_WORKSPACE=${2:-5}
 
-
-# Wrap-around for 1 to MAX_WORKSPACE
-if (( TARGET > MAX_WORKSPACE )); then
-    TARGET=1
-elif (( TARGET < 1 )); then
-    TARGET=$MAX_WORKSPACE
+# if we are at the target workspace, bail out!
+CURRENT_WORKSPACE=$(hyprctl monitors | awk '/workspace/ {print $3}' | head -n1)
+if [[ "$TARGET" == "$CURRENT_WORKSPACE"  ]]; then
+    exit
 fi
 
+# this is to support scrolling when we pass something outside of the range 
+# 1 - 5 (in this case) 
+# it will go to the opposite value, 
+# so if we pass for instance 6 it will switch to workspace 1
+
+WRAP_AROUND_AT=5 # change to how many workspaces you want to have
+if (( TARGET > WRAP_AROUND_AT )); then
+    TARGET=1
+elif (( TARGET < 1 )); then
+    TARGET=$WRAP_AROUND_AT
+fi
+
+# count how many monitors are present
 MONITOR_COUNT=$(hyprctl monitors | grep '^Monitor' | wc -l)
+
+# Global workspaces get encoded as a two-digit* number:
+#
+#   [ tens ][ units ]
+#     │        │
+#     │        └─── Global workspace index (1–9)
+#     └──────────── Monitor index (0 = primary, 1 = secondary, etc.)
+#
+# *when there is a zero in the tens place it is actually a single digit number
 
 for ((i = $(( MONITOR_COUNT-1)); i >= 0; i--)) ; do
     workspace=$(( TARGET + i * 10))
