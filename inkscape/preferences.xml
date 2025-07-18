@@ -119,8 +119,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="98.9701919555664"
-         height="98.9701919555664" />
+         width="469.717102050781"
+         height="255.372039794922" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -397,7 +397,7 @@
        gradientdrag="0"
        changelayer="1"
        changepage="1"
-       lock_aspect_ratio="1" />
+       lock_aspect_ratio="0" />
     <eventcontext
        id="connector"
        style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-linejoin:miter;stroke-width:1px;stroke-linecap:butt;"
@@ -1051,9 +1051,9 @@
      org.inkscape.output.png.inkscape.png_antialias="2" />
   <group
      id="desktop"
-     style="fill:#20242b;text-orientation:auto;-inkscape-font-specification:'ESPACION, Normal';font-family:ESPACION;font-size:60px;stroke-width:3.77952756;stroke-linejoin:bevel;paint-order:stroke fill markers;stroke:#1c2124">
+     style="fill:#20242b;text-orientation:auto;-inkscape-font-specification:'ESPACION, Normal';font-family:ESPACION;font-size:60px;stroke-width:3.77952756;stroke-linejoin:bevel;paint-order:stroke fill markers">
     <group
-       width="2556"
+       width="1276"
        height="1436"
        x="0"
        y="0"
