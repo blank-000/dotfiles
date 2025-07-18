@@ -13,7 +13,7 @@ MAX_WORKSPACE=${2:-5}
 if (( TARGET > MAX_WORKSPACE )); then
     TARGET=1
 elif (( TARGET < 1 )); then
-    TARGET=MAX_WORKSPACE
+    TARGET=$MAX_WORKSPACE
 fi
 
 MONITOR_COUNT=$(hyprctl monitors | grep '^Monitor' | wc -l)

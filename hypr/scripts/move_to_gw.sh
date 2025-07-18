@@ -1,13 +1,20 @@
 #!/bin/bash
 
 TARGET=$1
-current=$(hyprctl activewindow | awk '/workspace/ {print $2}')
 
-if [ "$current" -gt 10 ]; then
-    TARGET=$((TARGET + 10))
-fi
-# we use the silent option which doesn't switch to the workspace in order to 
-# preserve the global workspace bindings
-# this feels fragile, but works for now
-hyprctl dispatch movetoworkspacesilent "$TARGET"
 
+# Global workspaces are encoded as a two-digit number:
+#
+#   [ tens ][ units ]
+#     │        │
+#     │        └─── Global workspace index (1–9)
+#     └──────────── Monitor index (0 = primary, 1 = secondary, etc.)
+#
+# So we extract the monitor index from CURRENT_WORKSPACE (tens digit),
+# and replace the global index (units digit) with TARGET.
+
+CURRENT_WORKSPACE=$(hyprctl activewindow | awk '/workspace/ {print $2}')
+MONITOR_INDEX=$(( CURRENT_WORKSPACE / 10 * 10 ))
+COMBINED_INDEX=$(( MONITOR_INDEX + TARGET ))
+
+hyprctl dispatch movetoworkspacesilent "$COMBINED_INDEX"
