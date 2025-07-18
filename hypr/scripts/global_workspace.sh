@@ -6,26 +6,23 @@ if [ $# -eq 0 ]; then
 fi
 
 TARGET=$1
+MAX_WORKSPACE=${2:-5}
 
-# Wrap-around for 1 to maxWorkspace
-if (( TARGET > 5 )); then
+
+# Wrap-around for 1 to MAX_WORKSPACE
+if (( TARGET > MAX_WORKSPACE )); then
     TARGET=1
 elif (( TARGET < 1 )); then
-    TARGET=5
+    TARGET=MAX_WORKSPACE
 fi
-# Get monitor names
-main=$(hyprctl monitors | awk '/ID 0/ {print $2}')
-secondary=$(hyprctl monitors | awk '/ID 1/ {print $2}')
 
-# Create a paired workspace for the workspaces [ 1 - 9 -> 11 - 19 ]
-paired_workspace=$(( "$TARGET" + 10 ))
+MONITOR_COUNT=$(hyprctl monitors | grep '^Monitor' | wc -l)
 
-# switch the secondary monitor's workspace to the paired number
-hyprctl dispatch focusmonitor "$secondary"
-hyprctl dispatch workspace "$paired_workspace"
+for ((i = MONITOR_COUNT; i >= 0; i--)) ; do
+    workspace=$(( TARGET + i * 10))
+    hyprctl dispatch focusmonitor "$i"
+    hyprctl dispatch workspace "$workspace"
+done
 
-# switch the main monitor to the original TARGET
-hyprctl dispatch focusmonitor "$main"
-hyprctl dispatch workspace "$TARGET"
-
+# change wallpaper
 /home/bear/.config/hypr/scripts/set_wallpaper.sh "$TARGET"
