@@ -1,10 +1,10 @@
 #!/bin/bash
 
-one=/home/bear/Pictures/Wallpapers/bear_colors/bear_green.png
-two=/home/bear/Pictures/Wallpapers/bear_colors/bear_yellow.png
-three=/home/bear/Pictures/Wallpapers/bear_colors/bear_aqua.png
-four=/home/bear/Pictures/Wallpapers/bear_colors/bear_orange.png
-five=/home/bear/Pictures/Wallpapers/bear_colors/bear_red.png
+one=${HOME}/Pictures/Wallpapers/bear_colors/bear_green.png
+two=${HOME}/Pictures/Wallpapers/bear_colors/bear_yellow.png
+three=${HOME}/Pictures/Wallpapers/bear_colors/bear_aqua.png
+four=${HOME}/Pictures/Wallpapers/bear_colors/bear_orange.png
+five=${HOME}/Pictures/Wallpapers/bear_colors/bear_red.png
 
 case "$1" in
     1) selected="$one" ;;

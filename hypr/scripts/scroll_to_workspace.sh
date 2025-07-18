@@ -13,5 +13,5 @@ CURRENT_WORKSPACE=$(hyprctl monitors | awk '/active workspace/ {print $3}' | hea
 NEW_WORKSPACE=$(( CURRENT_WORKSPACE + $1 ))
 
 # Call global workspace script with new workspace number
-/home/bear/.config/hypr/scripts/global_workspace.sh "$NEW_WORKSPACE"
+${XDG_CONFIG_HOME:-${HOME}/.config}/hypr/scripts/global_workspace.sh "$NEW_WORKSPACE"
 

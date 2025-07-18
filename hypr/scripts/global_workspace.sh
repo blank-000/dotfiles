@@ -25,4 +25,4 @@ for ((i = $(( MONITOR_COUNT-1)); i >= 0; i--)) ; do
 done
 
 # change wallpaper
-/home/bear/.config/hypr/scripts/set_wallpaper.sh "$TARGET"
+${XDG_CONFIG_HOME:-${HOME}/.config}/hypr/scripts/set_wallpaper.sh "$TARGET"
