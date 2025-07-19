@@ -39,8 +39,7 @@ MONITOR_COUNT=$(hyprctl monitors | grep '^Monitor' | wc -l)
 
 for ((i = $(( MONITOR_COUNT-1)); i >= 0; i--)) ; do
     workspace=$(( TARGET + i * 10))
-    hyprctl dispatch focusmonitor "$i"
-    hyprctl dispatch workspace "$workspace"
+    hyprctl --batch "dispatch focusmonitor $i; dispatch workspace $workspace"
 done
 
 # change wallpaper
