@@ -23,7 +23,8 @@ window {
     border: 0px;
 
 
-    width: 25%;
+    width: 30%;
+    height: 25%;
 
     background-color: @transparent;
     spacing: 0;
@@ -114,6 +115,6 @@ button {
 }
 
 button selected normal {
-    border: 2px 2px 2px 2px;
+    border: 1px 1px 1px 1px;
     border-color: @fg0;
 }

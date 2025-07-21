@@ -6,7 +6,7 @@ configuration {
     display-filebrowser: "files:";
     drun-display-format: "{icon} {name}";
     font: "JetBrainsMono Nerd Font Medium 11";
-    modi: "drun,calc,filebrowser"; //this is all the modes that are available and enabled. 
+    modi: "drun,calc,emoji"; //this is all the modes that are available and enabled. 
     show-icons: true;
     icon-theme: "Everforest-Dark";
 }
