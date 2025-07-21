@@ -18,3 +18,4 @@
 !zsh
 !zsh/pure/
 zsh/.zsh_history
+zsh/.zcompdump
