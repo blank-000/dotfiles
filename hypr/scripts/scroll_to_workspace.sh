@@ -7,7 +7,12 @@ if [[ "$1" != "+1" && "$1" != "-1" ]]; then
 fi
 
 # Get current workspace number
-CURRENT_WORKSPACE=$(hyprctl monitors | awk '/active workspace/ {print $3}' | head -n1)
+# if we are at the target workspace, bail out!
+CURRENT_WORKSPACE=$(hyprctl monitors | awk '/workspace/ {print $3}' | head -n1)
+CURRENT_WORKSPACE=$(( $CURRENT_WORKSPACE % 10 ))
+if [[ "$TARGET" == "$CURRENT_WORKSPACE"  ]]; then
+    exit
+fi 
 
 # Calculate new workspace
 NEW_WORKSPACE=$(( CURRENT_WORKSPACE + $1 ))

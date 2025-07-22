@@ -18,3 +18,6 @@ MONITOR_INDEX=$(( CURRENT_WORKSPACE / 10 * 10 ))
 COMBINED_INDEX=$(( MONITOR_INDEX + TARGET ))
 
 hyprctl dispatch movetoworkspacesilent "$COMBINED_INDEX"
+
+# if we what to keep the behavior of moving to the workspace with the window:
+# ${XDG_CONFIG_HOME:-${HOME}/.config}/hypr/scripts/global_workspace.sh "$TARGET"
