@@ -11,4 +11,6 @@ return {
     require('plugins.todo-comments'),
     require('plugins.mini'),
     require('plugins.treesitter'),
+    require('plugins.copilot'),
+    require('plugins.indent-blankline'),
 }

@@ -10,6 +10,16 @@ vim.keymap.set("n", "<leader>r", function()
     vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Left><Left>", true, false, true), "n", false)
 end, { desc = "Find and replace word under cursor" })
 
+-- Open url under cursor in the default web browser
+vim.keymap.set("n", "<leader><CR>", function()
+    local url = vim.fn.expand("<cfile>")
+    if not url:match("^https?://") then
+        vim.notify("Not a valid URL: " .. url, vim.log.levels.WARN)
+        return
+    end
+    vim.fn.jobstart({ "xdg-open", url }, { detach = true })
+end, { desc = "Open URL under cursor" })
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
