@@ -35,7 +35,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { noremap = true, silent = true, desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
@@ -44,5 +44,4 @@ vim.keymap.set('n', '<S-A-j>', ':move+1<CR>', { desc = 'Move line up' })
 vim.keymap.set('n', '<S-A-k>', ':move-2<CR>', { desc = 'Move line down' })
 
 -- Visual mode: Move selection down/up
-vim.keymap.set('v', '<S-A-j>', ":m '>+1<CR>gv=gv", { desc = 'Move selection down' })
 vim.keymap.set('v', '<S-A-k>', ":m '<-2<CR>gv=gv", { desc = 'Move selection up' })

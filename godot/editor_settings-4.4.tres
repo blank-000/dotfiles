@@ -1,4 +1,8 @@
-[gd_resource type="EditorSettings" load_steps=2 format=3]
+[gd_resource type="EditorSettings" load_steps=3 format=3]
+
+[sub_resource type="InputEventKey" id="InputEventKey_w85qu"]
+device = -1
+keycode = 4194316
 
 [sub_resource type="InputEventKey" id="InputEventKey_prqjk"]
 keycode = 4194326
@@ -76,4 +80,8 @@ shortcuts = [{
 }, {
 "name": "spatial_editor/viewport_zoom_modifier_2",
 "shortcuts": []
+}]
+builtin_action_overrides = [{
+"events": [SubResource("InputEventKey_w85qu")],
+"name": "ui_text_toggle_insert_mode"
 }]
