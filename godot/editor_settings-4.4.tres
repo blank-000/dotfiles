@@ -1,11 +1,106 @@
-[gd_resource type="EditorSettings" load_steps=3 format=3]
+[gd_resource type="EditorSettings" load_steps=21 format=3]
 
 [sub_resource type="InputEventKey" id="InputEventKey_w85qu"]
 device = -1
 keycode = 4194316
 
 [sub_resource type="InputEventKey" id="InputEventKey_prqjk"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_6aus0"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_kw2ng"]
 keycode = 4194326
+
+[sub_resource type="InputEventKey" id="InputEventKey_81lae"]
+device = -1
+alt_pressed = true
+keycode = 49
+unicode = 49
+
+[sub_resource type="InputEventKey" id="InputEventKey_r4ddp"]
+device = -1
+alt_pressed = true
+keycode = 50
+unicode = 50
+
+[sub_resource type="InputEventKey" id="InputEventKey_y81go"]
+device = -1
+alt_pressed = true
+keycode = 51
+unicode = 51
+
+[sub_resource type="InputEventKey" id="InputEventKey_4wy0i"]
+device = -1
+alt_pressed = true
+keycode = 52
+unicode = 52
+
+[sub_resource type="InputEventKey" id="InputEventKey_4n6aa"]
+device = -1
+alt_pressed = true
+keycode = 53
+unicode = 53
+
+[sub_resource type="InputEventKey" id="InputEventKey_uv02e"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_mxy5m"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_tdgoo"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_f1glt"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_ty6wh"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_i2r3s"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_l80dt"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_ofm6f"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_pvc0v"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_815bc"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_jvvsl"]
+device = -1
+keycode = 88
+unicode = 120
 
 [resource]
 interface/theme/preset = "Custom"
@@ -59,7 +154,7 @@ export/windows/rcedit = ""
 export/windows/osslsigncode = ""
 export/windows/wine = ""
 _editor_settings_advanced_mode = true
-_project_settings_advanced_mode = false
+_project_settings_advanced_mode = true
 _export_template_download_directory = ""
 _default_feature_profile = ""
 _script_setup_templates_dictionary = {}
@@ -76,12 +171,66 @@ text_editor/theme/highlighting/comment_markers/warning_color = Color(0.858824, 0
 text_editor/theme/highlighting/comment_markers/notice_color = Color(0.498039, 0.733333, 0.701961, 1)
 shortcuts = [{
 "name": "spatial_editor/viewport_zoom_modifier_1",
-"shortcuts": [SubResource("InputEventKey_prqjk")]
+"shortcuts": [SubResource("InputEventKey_kw2ng")]
 }, {
 "name": "spatial_editor/viewport_zoom_modifier_2",
 "shortcuts": []
+}, {
+"name": "editor/editor_2d",
+"shortcuts": [SubResource("InputEventKey_81lae")]
+}, {
+"name": "editor/editor_3d",
+"shortcuts": [SubResource("InputEventKey_r4ddp")]
+}, {
+"name": "editor/editor_script",
+"shortcuts": [SubResource("InputEventKey_y81go")]
+}, {
+"name": "editor/editor_game",
+"shortcuts": [SubResource("InputEventKey_4wy0i")]
+}, {
+"name": "editor/editor_assetlib",
+"shortcuts": [SubResource("InputEventKey_4n6aa")]
+}, {
+"name": "file_dialog/delete",
+"shortcuts": [SubResource("InputEventKey_uv02e")]
+}, {
+"name": "scene_tree/delete",
+"shortcuts": [SubResource("InputEventKey_mxy5m")]
+}, {
+"name": "connections_editor/disconnect",
+"shortcuts": [SubResource("InputEventKey_tdgoo")]
+}, {
+"name": "groups_editor/delete",
+"shortcuts": [SubResource("InputEventKey_f1glt")]
+}, {
+"name": "filesystem_dock/delete",
+"shortcuts": [SubResource("InputEventKey_ty6wh")]
+}, {
+"name": "animation_marker_edit/delete_selection",
+"shortcuts": [SubResource("InputEventKey_i2r3s")]
+}, {
+"name": "animation_editor/delete_selection",
+"shortcuts": [SubResource("InputEventKey_l80dt")]
+}, {
+"name": "sprite_frames/delete_animation",
+"shortcuts": [SubResource("InputEventKey_ofm6f")]
+}, {
+"name": "sprite_frames/delete",
+"shortcuts": [SubResource("InputEventKey_pvc0v")]
+}, {
+"name": "tiles_editor/delete",
+"shortcuts": [SubResource("InputEventKey_815bc")]
+}, {
+"name": "audio_bus_editor/delete_selected_bus",
+"shortcuts": [SubResource("InputEventKey_jvvsl")]
 }]
 builtin_action_overrides = [{
 "events": [SubResource("InputEventKey_w85qu")],
 "name": "ui_text_toggle_insert_mode"
+}, {
+"events": [SubResource("InputEventKey_prqjk")],
+"name": "ui_text_delete"
+}, {
+"events": [SubResource("InputEventKey_6aus0")],
+"name": "ui_graph_delete"
 }]
