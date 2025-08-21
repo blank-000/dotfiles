@@ -1,13 +1,8 @@
-[gd_resource type="EditorSettings" load_steps=21 format=3]
+[gd_resource type="EditorSettings" load_steps=20 format=3]
 
 [sub_resource type="InputEventKey" id="InputEventKey_w85qu"]
 device = -1
 keycode = 4194316
-
-[sub_resource type="InputEventKey" id="InputEventKey_prqjk"]
-device = -1
-keycode = 88
-unicode = 120
 
 [sub_resource type="InputEventKey" id="InputEventKey_6aus0"]
 device = -1
@@ -72,16 +67,6 @@ device = -1
 keycode = 88
 unicode = 120
 
-[sub_resource type="InputEventKey" id="InputEventKey_i2r3s"]
-device = -1
-keycode = 88
-unicode = 120
-
-[sub_resource type="InputEventKey" id="InputEventKey_l80dt"]
-device = -1
-keycode = 88
-unicode = 120
-
 [sub_resource type="InputEventKey" id="InputEventKey_ofm6f"]
 device = -1
 keycode = 88
@@ -92,12 +77,21 @@ device = -1
 keycode = 88
 unicode = 120
 
-[sub_resource type="InputEventKey" id="InputEventKey_815bc"]
+[sub_resource type="InputEventKey" id="InputEventKey_jvvsl"]
 device = -1
 keycode = 88
 unicode = 120
 
-[sub_resource type="InputEventKey" id="InputEventKey_jvvsl"]
+[sub_resource type="InputEventKey" id="InputEventKey_prqjk"]
+device = -1
+keycode = 4194312
+
+[sub_resource type="InputEventKey" id="InputEventKey_i2r3s"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_l80dt"]
 device = -1
 keycode = 88
 unicode = 120
@@ -169,6 +163,9 @@ text_editor/theme/highlighting/gdscript/string_name_color = Color(0.513726, 0.75
 text_editor/theme/highlighting/comment_markers/critical_color = Color(0.901961, 0.494118, 0.501961, 1)
 text_editor/theme/highlighting/comment_markers/warning_color = Color(0.858824, 0.737255, 0.498039, 1)
 text_editor/theme/highlighting/comment_markers/notice_color = Color(0.498039, 0.733333, 0.701961, 1)
+asset_library/available_urls = {
+"godotengine.org (Official)": "https://godotengine.org/asset-library/api"
+}
 shortcuts = [{
 "name": "spatial_editor/viewport_zoom_modifier_1",
 "shortcuts": [SubResource("InputEventKey_kw2ng")]
@@ -206,30 +203,27 @@ shortcuts = [{
 "name": "filesystem_dock/delete",
 "shortcuts": [SubResource("InputEventKey_ty6wh")]
 }, {
-"name": "animation_marker_edit/delete_selection",
-"shortcuts": [SubResource("InputEventKey_i2r3s")]
-}, {
-"name": "animation_editor/delete_selection",
-"shortcuts": [SubResource("InputEventKey_l80dt")]
-}, {
 "name": "sprite_frames/delete_animation",
 "shortcuts": [SubResource("InputEventKey_ofm6f")]
 }, {
 "name": "sprite_frames/delete",
 "shortcuts": [SubResource("InputEventKey_pvc0v")]
 }, {
-"name": "tiles_editor/delete",
-"shortcuts": [SubResource("InputEventKey_815bc")]
-}, {
 "name": "audio_bus_editor/delete_selected_bus",
 "shortcuts": [SubResource("InputEventKey_jvvsl")]
+}, {
+"name": "tiles_editor/rotate_tile_right",
+"shortcuts": [SubResource("InputEventKey_prqjk")]
+}, {
+"name": "animation_marker_edit/delete_selection",
+"shortcuts": [SubResource("InputEventKey_i2r3s")]
+}, {
+"name": "animation_editor/delete_selection",
+"shortcuts": [SubResource("InputEventKey_l80dt")]
 }]
 builtin_action_overrides = [{
 "events": [SubResource("InputEventKey_w85qu")],
 "name": "ui_text_toggle_insert_mode"
-}, {
-"events": [SubResource("InputEventKey_prqjk")],
-"name": "ui_text_delete"
 }, {
 "events": [SubResource("InputEventKey_6aus0")],
 "name": "ui_graph_delete"
