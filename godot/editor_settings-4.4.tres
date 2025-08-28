@@ -1,4 +1,4 @@
-[gd_resource type="EditorSettings" load_steps=20 format=3]
+[gd_resource type="EditorSettings" load_steps=23 format=3]
 
 [sub_resource type="InputEventKey" id="InputEventKey_w85qu"]
 device = -1
@@ -96,12 +96,27 @@ device = -1
 keycode = 88
 unicode = 120
 
+[sub_resource type="InputEventKey" id="InputEventKey_fr0r1"]
+device = -1
+physical_keycode = 71
+unicode = 103
+
+[sub_resource type="InputEventKey" id="InputEventKey_815bc"]
+device = -1
+physical_keycode = 82
+unicode = 114
+
+[sub_resource type="InputEventKey" id="InputEventKey_bw0fv"]
+device = -1
+physical_keycode = 83
+unicode = 115
+
 [resource]
 interface/theme/preset = "Custom"
 interface/theme/base_color = Color(0.176471, 0.207843, 0.231373, 1)
 interface/theme/accent_color = Color(0.654902, 0.752941, 0.501961, 1)
 interface/theme/contrast = 0.3
-text_editor/theme/color_theme = "Everforest-Dark-Hard"
+text_editor/theme/color_theme = "Custom"
 text_editor/theme/highlighting/symbol_color = Color(0.827451, 0.776471, 0.666667, 1)
 text_editor/theme/highlighting/keyword_color = Color(0.901961, 0.494118, 0.501961, 1)
 text_editor/theme/highlighting/control_flow_keyword_color = Color(0.901961, 0.494118, 0.501961, 1)
@@ -163,9 +178,7 @@ text_editor/theme/highlighting/gdscript/string_name_color = Color(0.513726, 0.75
 text_editor/theme/highlighting/comment_markers/critical_color = Color(0.901961, 0.494118, 0.501961, 1)
 text_editor/theme/highlighting/comment_markers/warning_color = Color(0.858824, 0.737255, 0.498039, 1)
 text_editor/theme/highlighting/comment_markers/notice_color = Color(0.498039, 0.733333, 0.701961, 1)
-asset_library/available_urls = {
-"godotengine.org (Official)": "https://godotengine.org/asset-library/api"
-}
+text_editor/theme/highlighting/comment_markers/warning_list = "BUG,DEPRECATED,FIXME,HACK,TASK,TBD,TODO,WARNING,DEBUG"
 shortcuts = [{
 "name": "spatial_editor/viewport_zoom_modifier_1",
 "shortcuts": [SubResource("InputEventKey_kw2ng")]
@@ -220,6 +233,15 @@ shortcuts = [{
 }, {
 "name": "animation_editor/delete_selection",
 "shortcuts": [SubResource("InputEventKey_l80dt")]
+}, {
+"name": "spatial_editor/instant_translate",
+"shortcuts": [SubResource("InputEventKey_fr0r1")]
+}, {
+"name": "spatial_editor/instant_rotate",
+"shortcuts": [SubResource("InputEventKey_815bc")]
+}, {
+"name": "spatial_editor/instant_scale",
+"shortcuts": [SubResource("InputEventKey_bw0fv")]
 }]
 builtin_action_overrides = [{
 "events": [SubResource("InputEventKey_w85qu")],
