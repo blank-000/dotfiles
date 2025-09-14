@@ -1,4 +1,4 @@
-[gd_resource type="EditorSettings" load_steps=23 format=3]
+[gd_resource type="EditorSettings" load_steps=24 format=3]
 
 [sub_resource type="InputEventKey" id="InputEventKey_w85qu"]
 device = -1
@@ -110,6 +110,12 @@ unicode = 114
 device = -1
 physical_keycode = 83
 unicode = 115
+
+[sub_resource type="InputEventKey" id="InputEventKey_yy4yu"]
+device = -1
+alt_pressed = true
+keycode = 70
+unicode = 102
 
 [resource]
 interface/theme/preset = "Custom"
@@ -242,6 +248,9 @@ shortcuts = [{
 }, {
 "name": "spatial_editor/instant_scale",
 "shortcuts": [SubResource("InputEventKey_bw0fv")]
+}, {
+"name": "script_editor/find_in_files",
+"shortcuts": [SubResource("InputEventKey_yy4yu")]
 }]
 builtin_action_overrides = [{
 "events": [SubResource("InputEventKey_w85qu")],
