@@ -1,0 +1,264 @@
+[gd_resource type="EditorSettings" load_steps=24 format=3]
+
+[sub_resource type="InputEventKey" id="InputEventKey_w85qu"]
+device = -1
+keycode = 4194316
+
+[sub_resource type="InputEventKey" id="InputEventKey_6aus0"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_yxfwc"]
+keycode = 4194326
+
+[sub_resource type="InputEventKey" id="InputEventKey_81lae"]
+device = -1
+alt_pressed = true
+keycode = 49
+unicode = 49
+
+[sub_resource type="InputEventKey" id="InputEventKey_r4ddp"]
+device = -1
+alt_pressed = true
+keycode = 50
+unicode = 50
+
+[sub_resource type="InputEventKey" id="InputEventKey_y81go"]
+device = -1
+alt_pressed = true
+keycode = 51
+unicode = 51
+
+[sub_resource type="InputEventKey" id="InputEventKey_4wy0i"]
+device = -1
+alt_pressed = true
+keycode = 52
+unicode = 52
+
+[sub_resource type="InputEventKey" id="InputEventKey_4n6aa"]
+device = -1
+alt_pressed = true
+keycode = 53
+unicode = 53
+
+[sub_resource type="InputEventKey" id="InputEventKey_uv02e"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_mxy5m"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_tdgoo"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_f1glt"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_ty6wh"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_ofm6f"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_pvc0v"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_jvvsl"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_prqjk"]
+device = -1
+keycode = 4194312
+
+[sub_resource type="InputEventKey" id="InputEventKey_i2r3s"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_l80dt"]
+device = -1
+keycode = 88
+unicode = 120
+
+[sub_resource type="InputEventKey" id="InputEventKey_fr0r1"]
+device = -1
+physical_keycode = 71
+unicode = 103
+
+[sub_resource type="InputEventKey" id="InputEventKey_815bc"]
+device = -1
+physical_keycode = 82
+unicode = 114
+
+[sub_resource type="InputEventKey" id="InputEventKey_bw0fv"]
+device = -1
+physical_keycode = 83
+unicode = 115
+
+[sub_resource type="InputEventKey" id="InputEventKey_yy4yu"]
+device = -1
+alt_pressed = true
+keycode = 70
+unicode = 102
+
+[resource]
+interface/theme/preset = "Custom"
+interface/theme/base_color = Color(0.176471, 0.207843, 0.231373, 1)
+interface/theme/accent_color = Color(0.654902, 0.752941, 0.501961, 1)
+interface/theme/contrast = 0.3
+text_editor/theme/color_theme = "Custom"
+text_editor/theme/highlighting/symbol_color = Color(0.827451, 0.776471, 0.666667, 1)
+text_editor/theme/highlighting/keyword_color = Color(0.901961, 0.494118, 0.501961, 1)
+text_editor/theme/highlighting/control_flow_keyword_color = Color(0.901961, 0.494118, 0.501961, 1)
+text_editor/theme/highlighting/base_type_color = Color(0.858824, 0.737255, 0.498039, 1)
+text_editor/theme/highlighting/engine_type_color = Color(0.858824, 0.737255, 0.498039, 1)
+text_editor/theme/highlighting/user_type_color = Color(0.858824, 0.737255, 0.498039, 1)
+text_editor/theme/highlighting/comment_color = Color(0.521569, 0.572549, 0.537255, 1)
+text_editor/theme/highlighting/doc_comment_color = Color(0.521569, 0.572549, 0.537255, 1)
+text_editor/theme/highlighting/string_color = Color(0.513726, 0.752941, 0.572549, 1)
+text_editor/theme/highlighting/background_color = Color(0.152941, 0.180392, 0.2, 1)
+text_editor/theme/highlighting/text_color = Color(0.827451, 0.776471, 0.666667, 1)
+text_editor/theme/highlighting/line_number_color = Color(0.478431, 0.517647, 0.470588, 1)
+text_editor/theme/highlighting/safe_line_number_color = Color(0.521569, 0.572549, 0.537255, 1)
+text_editor/theme/highlighting/caret_color = Color(0.827451, 0.776471, 0.666667, 1)
+text_editor/theme/highlighting/caret_background_color = Color(0.180392, 0.219608, 0.235294, 1)
+text_editor/theme/highlighting/text_selected_color = Color(0.827451, 0.776471, 0.666667, 1)
+text_editor/theme/highlighting/selection_color = Color(0.298039, 0.215686, 0.262745, 1)
+text_editor/theme/highlighting/brace_mismatch_color = Color(0.901961, 0.494118, 0.501961, 1)
+text_editor/theme/highlighting/current_line_color = Color(0.180392, 0.219608, 0.235294, 1)
+text_editor/theme/highlighting/line_length_guideline_color = Color(0.180392, 0.219608, 0.235294, 1)
+text_editor/theme/highlighting/number_color = Color(0.839216, 0.6, 0.713726, 1)
+text_editor/theme/highlighting/function_color = Color(0.654902, 0.752941, 0.501961, 1)
+text_editor/theme/highlighting/member_variable_color = Color(0.498039, 0.733333, 0.701961, 1)
+text_editor/theme/highlighting/mark_color = Color(0.317647, 0.25098, 0.270588, 1)
+text_editor/theme/highlighting/bookmark_color = Color(0.498039, 0.733333, 0.701961, 1)
+text_editor/theme/highlighting/breakpoint_color = Color(0.901961, 0.494118, 0.501961, 1)
+text_editor/theme/highlighting/executing_line_color = Color(0.858824, 0.737255, 0.498039, 1)
+text_editor/theme/highlighting/code_folding_color = Color(0.521569, 0.572549, 0.537255, 1)
+text_editor/theme/highlighting/folded_code_region_color = Color(0.521569, 0.572549, 0.537255, 0.2)
+text_editor/theme/highlighting/search_result_color = Color(0.901961, 0.596078, 0.458824, 1)
+text_editor/theme/highlighting/search_result_border_color = Color(0.270588, 0.266667, 0.235294, 1)
+text_editor/theme/highlighting/gdscript/function_definition_color = Color(0.654902, 0.752941, 0.501961, 1)
+text_editor/theme/highlighting/gdscript/global_function_color = Color(0.654902, 0.752941, 0.501961, 1)
+text_editor/theme/highlighting/gdscript/node_path_color = Color(0.513726, 0.752941, 0.572549, 1)
+text_editor/theme/highlighting/gdscript/node_reference_color = Color(0.513726, 0.752941, 0.572549, 1)
+text_editor/theme/highlighting/gdscript/annotation_color = Color(0.839216, 0.6, 0.713726, 1)
+text_editor/theme/highlighting/gdscript/string_name_color = Color(0.513726, 0.752941, 0.572549, 1)
+text_editor/theme/highlighting/comment_markers/critical_color = Color(0.901961, 0.494118, 0.501961, 1)
+text_editor/theme/highlighting/comment_markers/warning_color = Color(0.858824, 0.737255, 0.498039, 1)
+text_editor/theme/highlighting/comment_markers/notice_color = Color(0.498039, 0.733333, 0.701961, 1)
+text_editor/theme/highlighting/comment_markers/warning_list = "BUG,DEPRECATED,FIXME,HACK,TASK,TBD,TODO,WARNING,DEBUG"
+text_editor/behavior/files/auto_reload_scripts_on_external_change = false
+editors/3d_gizmos/gizmo_settings/bone_axis_length = 0.1
+editors/animation/default_animation_step = 0.033333335
+network/connection/network_mode = 1
+project_manager/directory_naming_convention = 2
+interface/touchscreen/increase_scrollbar_touch_area = false
+export/android/debug_keystore = "/home/bear/.local/share/godot/keystores/debug.keystore"
+export/android/debug_keystore_pass = "android"
+export/android/java_sdk_path = ""
+export/android/android_sdk_path = "/home/bear/Android/Sdk"
+export/macos/rcodesign = ""
+export/web/http_port = 8060
+export/web/tls_key = ""
+export/web/tls_certificate = ""
+export/windows/rcedit = ""
+export/windows/osslsigncode = ""
+export/windows/wine = ""
+_editor_settings_advanced_mode = true
+_project_settings_advanced_mode = true
+_export_template_download_directory = "/home/bear/.cache/godot"
+_default_feature_profile = ""
+_script_setup_templates_dictionary = {}
+_use_favorites_root_selection = false
+_script_setup_use_script_templates = false
+shortcuts = [{
+"name": "spatial_editor/viewport_zoom_modifier_1",
+"shortcuts": [SubResource("InputEventKey_yxfwc")]
+}, {
+"name": "spatial_editor/viewport_zoom_modifier_2",
+"shortcuts": []
+}, {
+"name": "editor/editor_2d",
+"shortcuts": [SubResource("InputEventKey_81lae")]
+}, {
+"name": "editor/editor_3d",
+"shortcuts": [SubResource("InputEventKey_r4ddp")]
+}, {
+"name": "editor/editor_script",
+"shortcuts": [SubResource("InputEventKey_y81go")]
+}, {
+"name": "editor/editor_game",
+"shortcuts": [SubResource("InputEventKey_4wy0i")]
+}, {
+"name": "editor/editor_assetlib",
+"shortcuts": [SubResource("InputEventKey_4n6aa")]
+}, {
+"name": "file_dialog/delete",
+"shortcuts": [SubResource("InputEventKey_uv02e")]
+}, {
+"name": "scene_tree/delete",
+"shortcuts": [SubResource("InputEventKey_mxy5m")]
+}, {
+"name": "connections_editor/disconnect",
+"shortcuts": [SubResource("InputEventKey_tdgoo")]
+}, {
+"name": "groups_editor/delete",
+"shortcuts": [SubResource("InputEventKey_f1glt")]
+}, {
+"name": "filesystem_dock/delete",
+"shortcuts": [SubResource("InputEventKey_ty6wh")]
+}, {
+"name": "sprite_frames/delete_animation",
+"shortcuts": [SubResource("InputEventKey_ofm6f")]
+}, {
+"name": "sprite_frames/delete",
+"shortcuts": [SubResource("InputEventKey_pvc0v")]
+}, {
+"name": "audio_bus_editor/delete_selected_bus",
+"shortcuts": [SubResource("InputEventKey_jvvsl")]
+}, {
+"name": "tiles_editor/rotate_tile_right",
+"shortcuts": [SubResource("InputEventKey_prqjk")]
+}, {
+"name": "animation_marker_edit/delete_selection",
+"shortcuts": [SubResource("InputEventKey_i2r3s")]
+}, {
+"name": "animation_editor/delete_selection",
+"shortcuts": [SubResource("InputEventKey_l80dt")]
+}, {
+"name": "spatial_editor/instant_translate",
+"shortcuts": [SubResource("InputEventKey_fr0r1")]
+}, {
+"name": "spatial_editor/instant_rotate",
+"shortcuts": [SubResource("InputEventKey_815bc")]
+}, {
+"name": "spatial_editor/instant_scale",
+"shortcuts": [SubResource("InputEventKey_bw0fv")]
+}, {
+"name": "script_editor/find_in_files",
+"shortcuts": [SubResource("InputEventKey_yy4yu")]
+}]
+builtin_action_overrides = [{
+"events": [SubResource("InputEventKey_w85qu")],
+"name": "ui_text_toggle_insert_mode"
+}, {
+"events": [SubResource("InputEventKey_6aus0")],
+"name": "ui_graph_delete"
+}]

@@ -1,6 +1,6 @@
-return {  -- Telescope fuzzy finder
+return { -- telescope fuzzy finder (ONLY <leader>sg changed)
     'nvim-telescope/telescope.nvim',
-    event = 'VimEnter',
+    event = 'vimenter',
     dependencies = {
         'nvim-lua/plenary.nvim',
         {
@@ -14,7 +14,10 @@ return {  -- Telescope fuzzy finder
         { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
     config = function()
-        require('telescope').setup {
+        local telescope = require('telescope')
+        local builtin = require('telescope.builtin')
+
+        telescope.setup {
             extensions = {
                 ['ui-select'] = {
                     require('telescope.themes').get_dropdown(),
@@ -22,37 +25,72 @@ return {  -- Telescope fuzzy finder
             },
         }
 
-        pcall(require('telescope').load_extension, 'fzf')
-        pcall(require('telescope').load_extension, 'ui-select')
+        pcall(telescope.load_extension, 'fzf')
+        pcall(telescope.load_extension, 'ui-select')
 
-        local builtin = require 'telescope.builtin'
-        vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
-        vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
-        vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
-        vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
-        vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
-        vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
-        vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
-        vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
-        vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files' })
-        vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+        -- helper: try to find git root starting from `startpath`
+        local function find_git_root(startpath)
+            if not startpath or startpath == '' then
+                return nil
+            end
+            -- run git from the startpath so we find the nearest enclosing repo
+            local cmd = 'git -C ' .. vim.fn.shellescape(startpath) .. ' rev-parse --show-toplevel 2>/dev/null'
+            local out = vim.fn.systemlist(cmd)
+            if vim.v.shell_error == 0 and out[1] and out[1] ~= '' then
+                return out[1]
+            end
+            return nil
+        end
+
+        -- ORIGINAL keymaps left untouched except <leader>sg below
+        vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[s]earch [h]elp' })
+        vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[s]earch [k]eymaps' })
+        vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[s]earch [f]iles' })
+        vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[s]earch [s]elect telescope' })
+        vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[s]earch current [w]ord' })
+
+        -- ONLY THIS MAPPING CHANGED: use buffer-dir -> git-root (if any) -> run live_grep with cwd
+        vim.keymap.set('n', '<leader>sg', function()
+            -- get directory of current buffer, fallback to process cwd
+            local bufname = vim.api.nvim_buf_get_name(0)
+            local startpath = nil
+            if bufname and bufname ~= '' then
+                startpath = vim.fn.fnamemodify(bufname, ':h')
+            else
+                startpath = vim.loop.cwd()
+            end
+
+            local git_root = find_git_root(startpath)
+            if git_root then
+                -- force live_grep to run inside the repo root
+                builtin.live_grep({ cwd = git_root })
+            else
+                -- no git found: default behavior (search from cwd)
+                builtin.live_grep()
+            end
+        end, { desc = '[s]earch by [g]rep (nearest git root from current file)' })
+
+        vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[s]earch [d]iagnostics' })
+        vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[s]earch [r]esume' })
+        vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[s]earch recent files' })
+        vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] find existing buffers' })
 
         vim.keymap.set('n', '<leader>/', function()
             builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
                 winblend = 10,
                 previewer = false,
             })
-        end, { desc = '[/] Search in current buffer' })
+        end, { desc = '[/] search in current buffer' })
 
         vim.keymap.set('n', '<leader>s/', function()
             builtin.live_grep {
                 grep_open_files = true,
-                prompt_title = 'Live Grep in Open Files',
+                prompt_title = 'live grep in open files',
             }
-        end, { desc = '[S]earch [/] in Open Files' })
+        end, { desc = '[s]earch [/] in open files' })
 
         vim.keymap.set('n', '<leader>sn', function()
             builtin.find_files { cwd = vim.fn.stdpath 'config' }
-        end, { desc = '[S]earch [N]eovim files' })
+        end, { desc = '[s]earch [n]eovim files' })
     end,
 }
