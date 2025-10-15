@@ -169,6 +169,7 @@ editors/3d_gizmos/gizmo_settings/bone_axis_length = 0.1
 editors/animation/default_animation_step = 0.033333335
 network/connection/network_mode = 1
 project_manager/directory_naming_convention = 2
+project_manager/default_renderer = "gl_compatibility"
 interface/touchscreen/increase_scrollbar_touch_area = false
 export/android/debug_keystore = "/home/bear/.local/share/godot/keystores/debug.keystore"
 export/android/debug_keystore_pass = "android"
