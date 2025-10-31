@@ -208,6 +208,8 @@ return {
             -- ts_ls = {},
             --
 
+            glsl_analyzer = {},
+
             lua_ls = {
                 -- cmd = { ... },
                 -- filetypes = { ... },

@@ -13,4 +13,5 @@ return {
     require('plugins.treesitter'),
     require('plugins.copilot'),
     require('plugins.indent-blankline'),
+    require('plugins.render-markdown'),
 }
