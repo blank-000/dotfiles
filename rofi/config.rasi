@@ -9,6 +9,10 @@ configuration {
     modi: "drun,calc,emoji"; //this is all the modes that are available and enabled. 
     show-icons: true;
     icon-theme: "Everforest-Dark";
+    kb-row-down: "Control+j";
+    kb-row-up: "Control+k";
+    kb-remove-to-eol: "";
+    kb-accept-entry: "Return,KP_Enter";
 }
 
 @theme "/home/bear/.config/rofi/themes/everforest.rasi"
