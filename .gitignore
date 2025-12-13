@@ -4,6 +4,7 @@
 # do not ignore these:
 !.gitignore
 !hypr/
+!quickshell/
 !imv/
 !mpv/
 !calcure/
