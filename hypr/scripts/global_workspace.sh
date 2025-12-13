@@ -49,6 +49,7 @@ MONITOR_COUNT=$(hyprctl monitors | grep '^Monitor' | wc -l)
 # │     2        │         2            │          22           │
 # │     3        │         2            │          32           │
 # └──────────────┴──────────────────────┴───────────────────────┘
+# etc.
 
 
 for ((i = $(( MONITOR_COUNT-1)); i >= 0; i--)) ; do
