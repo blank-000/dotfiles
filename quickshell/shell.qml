@@ -33,7 +33,7 @@ Variants {
 
             anchors.top: true
             anchors.right: true
-            margins.top:  (1200 + monitor_offset) * s
+            margins.top:  (1206 + monitor_offset) * s
             margins.right: 60 * s
 
             exclusiveZone: 0
@@ -44,8 +44,8 @@ Variants {
                 anchors.centerIn: parent
                 text: Time.time
                 color: root.text_color
-                font.family: "Kamikaze 3D Gradient"
-                font.pixelSize: 72 * s
+                font.family: "Loaded"
+                font.pixelSize: 62 * s
             }
             Connections {
                 target: Hyprland
