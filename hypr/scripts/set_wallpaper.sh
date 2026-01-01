@@ -32,5 +32,15 @@ case "$1" in
     ratio="$ratio_one" ;;
 esac
 
-hyprctl hyprpaper wallpaper "HDMI-A-1,$selected"
-hyprctl hyprpaper wallpaper "eDP-1,$ratio"
+#hyprctl hyprpaper wallpaper "HDMI-A-1,$selected"
+#hyprctl hyprpaper wallpaper "eDP-1,$ratio"
+
+
+OLD_PIDS=$(pgrep -x swaybg)
+
+swaybg -o HDMI-A-1 -i "$selected" \
+       -o eDP-1   -i "$ratio" &
+
+sleep .2
+kill $OLD_PIDS
+
